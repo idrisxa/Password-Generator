@@ -132,7 +132,11 @@ charac.textContent = " Your password is: " + password;
 
 function copyFunction() {
 
-
+if(password == "")
+{
+    alert("Sorry, no password generated yet.");
+}
+else{
 /* Get the text field */
 var copyTextArray = charac.textContent.split(" ");
 var copyText = document.createElement('textarea');
@@ -148,6 +152,7 @@ document.execCommand('copy');
 document.body.removeChild(copyText); 
 
 alert("Copied the generated password: " + copyText.value);
+}
 
 }
 
